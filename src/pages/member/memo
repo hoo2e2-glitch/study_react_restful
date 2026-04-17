@@ -1,57 +1,60 @@
-// rfc -> tap
+// rsc -> tap
 
-// // fetch로 회원 목록 api 요청 후
-// // 회원의 이메일을 모두 화면에 출력하기
-// const MemberList = () => {
+//==============================================================
 
-//   const[MemberList, setMemberList] = useState([]);
+//리액트 fetch 실습
+// 회원 수정 완성
 
-//   useEffect(() => {
-//     const getMember = async() => {
-//     const response = await fetch("http://localhost:10000/api/members")
-//     const MemberList = await response.json()
-//     const {message, date} = MemberList;
-//     console.log(data)
-//     setMember(date)
-//     // setMember(MemberList)
 
-//     }
+// 게시글의 목록
+// 게시글 상세보기
+// 게시글 작성
+// 게시글 수정
+// 게시글 삭제
 
-//     getMember()
-//   }, [])
+  // const update = async() => {
+  //     await fetch(`http://localhost:10000/api/members/${id}`, {
+  //       method: "PUT",
+  //       headers: {
+  //         "Content-Type" : "application/json"
+  //       },
+  //       body: JSON.stringify(memberInsertRequestDTO)
+  //     })
+  //     .then(async (res) => {
+  //       const result = await res.json()
+  //       if(!res.ok){
+  //         throw new Error(result.message)
+  //       }
+  //       return result;
+
+  //     })
+  //     .then((res) => {
+  //       alert(result.message)
+  //       navigate("/members/member-info")
+  //       // navigate(`/members/member-info/${id}`)
+  //     })
+  //     .catch((err) => {
+  //       alert(err.message)
+  //     })
+
+  //   }
+
+  //  useEffect(() => {
+  //     fetch(`http://localhost:10000/api/members/${id}`)
+  //     .then((res) => res.json())
+  //     .then((result) => {
+  //       setMember();
+  //     })
+  //     .catch((err) => {
+  //         alert(err.message)
+  //       })
   
-
-//   const memberNames = MemberList.map(({memberName}, i) => (
-//       <li key={i}>{memberName}</li>
-//     ));
-
-//   // getMember()
-//   // .then((member) => {setIsLoading(false), setMember(member)})
-//   // .catch((err) => {setIsLoading(true), console.error(err)}) }, [])
-
-//   // if(isLoding){
-//   //   return
-//   // }
-
-// ============================================================================
-
-    // const [member, setMember] = useState({});
-
-    // useEffect(() => {
-    //     const getMemberInfo = async () => {
-
-    //         const response = await fetch("http://localhost:10000/api/members/1")
-    //         if(!response.ok) throw new Error("getMember fetch false")
-    //         const data = await response.json()
-    //         setMember(data)
-    //     }
-
-    //     // try catch 1번째 방법
-    //     getMember()
-    //     .then()
-    //     .catch((err) => {
-    //       alert(err.message)
-    //       // console.log(err)
-    //     })
-    // }, [])
-
+  //   }, [id]);
+  
+  //   const change = (e) => {
+  //       const {name, value} = e.target;
+  //       setMember({
+  //         ...member,
+  //         [name]: value,
+  //       })
+  //   }
